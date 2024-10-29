@@ -28,4 +28,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: user/app:latest
+          tags: sg7192/giftcardsite:latest
