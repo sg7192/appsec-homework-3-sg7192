@@ -28,4 +28,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: sg7192/giftcardsite:latest
+          tags: sg7192/giftcardsite:${{ github.sha }}
