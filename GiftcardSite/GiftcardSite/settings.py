@@ -25,7 +25,8 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('secretkey')
+passw = os.environ.get('MYSQL_ROOT_PASSWORD')
+SECRET_KEY = os.environ.get('secretkey')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(int(os.environ.get('DEBUG', 0)))

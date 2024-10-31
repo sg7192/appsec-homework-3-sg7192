@@ -2,6 +2,10 @@ FROM python:3.8-alpine
 
 ENV PATH="/scripts:${PATH}"
 
+RUN apk add --no-cache curl
+RUN curl -sL https://github.com/bitnami-labs/sealed-secrets/releases/latest/download/kubeseal-linux-amd64 -o /usr/local/bin/kubeseal && \
+    chmod +x /usr/local/bin/kubeseal
+
 COPY requirements.txt /requirements.txt
 
 RUN apk add --update --no-cache --virtual .tmp gcc libc-dev linux-headers
